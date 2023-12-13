@@ -1,0 +1,9 @@
+select e.company_code, max(founder), 
+count(distinct lead_manager_code),
+count(distinct senior_manager_code),
+count(distinct manager_code),
+count(distinct employee_code)
+from Employee e
+join company c on e.company_code=c.company_code
+group by e.company_code
+order by e.company_code
