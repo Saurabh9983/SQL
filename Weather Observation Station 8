@@ -1,0 +1,4 @@
+SELECT city
+FROM STATION
+WHERE LEFT(city, 1) IN ('A', 'E', 'I', 'O', 'U')
+  AND RIGHT(city, 1) IN ('a', 'e', 'i', 'o', 'u');
